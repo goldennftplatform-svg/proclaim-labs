@@ -33,8 +33,9 @@ Licensed **MIT AND Apache-2.0** — both licenses apply. See `LICENSE-MIT` and
 | `lp0021-phase2-testimonials/` | LP-0021 | 50 passing | Local `testimonial_store` model. Not an on-chain program. |
 | `lp0021-phase3/` | LP-0021 | 50 passing | Local token ledger, opaque private-account handles and human-readable effects summary. Opaque handles are **not** real privacy. |
 | `lp0023-claim-binding/` | LP-0023 | 40 passing | Deployer-claim rejection demo. Toy signature **model**, not real cryptography or on-chain binding. |
+| `lp0021-phase4-provider-protocol/` | LP-0021 | 45 passing | Local versioned request/response envelopes, correlation IDs, retry/dedupe, cancel/timeout and payload-free audit log. In-memory model only, **not** real transport or privacy. |
 
-**Total: 278 passing tests across seven workspaces.** Every workspace passes `cargo fmt --all -- --check`,
+**Total: 323 passing tests across eight workspaces.** Every workspace passes `cargo fmt --all -- --check`,
 `cargo clippy --workspace --all-targets -- -D warnings` with no warnings, and a
 secret scan. Source files carry SPDX `MIT AND Apache-2.0`. Build artifacts
 (`target/`) are not included.

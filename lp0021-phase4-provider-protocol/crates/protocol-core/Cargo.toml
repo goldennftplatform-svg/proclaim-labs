@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "protocol-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
