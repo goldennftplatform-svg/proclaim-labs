@@ -30,8 +30,11 @@ Licensed **MIT AND Apache-2.0** — both licenses apply. See `LICENSE-MIT` and
 | `lp0021-permissions/` | LP-0021, LP-0001 | 23 passing | Deny-by-default consent/permission store. Zero dependencies. Shared by the wallet and the NFT-proof work. |
 | `lp0021-phase0/` | LP-0021 | 20 passing | Secure-core types: opaque accounts, keystore abstraction, wallet core. Adapter-based; no on-chain wallet. |
 | `lp0021-phase1/` | LP-0021 | 51 passing | Local wallet vertical slice: ledger replay, per-asset balances, approval-gated send/receive, restart reconstruction. In-memory only. |
+| `lp0021-phase2-testimonials/` | LP-0021 | 50 passing | Local `testimonial_store` model. Not an on-chain program. |
+| `lp0021-phase3/` | LP-0021 | 50 passing | Local token ledger, opaque private-account handles and human-readable effects summary. Opaque handles are **not** real privacy. |
+| `lp0023-claim-binding/` | LP-0023 | 40 passing | Deployer-claim rejection demo. Toy signature **model**, not real cryptography or on-chain binding. |
 
-**Total: 138 passing tests.** Every workspace passes `cargo fmt --all -- --check`,
+**Total: 278 passing tests across seven workspaces.** Every workspace passes `cargo fmt --all -- --check`,
 `cargo clippy --workspace --all-targets -- -D warnings` with no warnings, and a
 secret scan. Source files carry SPDX `MIT AND Apache-2.0`. Build artifacts
 (`target/`) are not included.

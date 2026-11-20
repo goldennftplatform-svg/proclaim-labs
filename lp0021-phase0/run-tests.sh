@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
 #!/usr/bin/env bash
 # Exact command sequence used to build/test this workspace in WSL on 2026-11-19.
 set -euo pipefail

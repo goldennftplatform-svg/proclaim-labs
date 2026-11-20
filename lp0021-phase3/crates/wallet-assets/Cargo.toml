@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "wallet-assets"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "In-memory fungible token and private-account ledger model for LP-0021 phase 3 (NOT a chain or token program)."

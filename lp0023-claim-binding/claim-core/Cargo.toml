@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+
+[package]
+name = "claim-core"
+version = "0.1.0"
+edition = "2021"
+description = "Dependency-free model types for local deployer-claim binding"
+license = "MIT AND Apache-2.0"
+
+[dependencies]

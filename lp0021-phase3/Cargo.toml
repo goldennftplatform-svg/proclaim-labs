@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[workspace]
+resolver = "2"
+members = [
+    "crates/wallet-assets",
+    "crates/wallet-bridge",
+    "crates/wallet-summary",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT AND Apache-2.0"
+publish = false

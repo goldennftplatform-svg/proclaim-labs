@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "wallet-bridge"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Adapter traits and local in-memory/unavailable implementations for the LP-0021 phase 3 asset model."
+
+[dependencies]
+wallet-assets = { path = "../wallet-assets" }

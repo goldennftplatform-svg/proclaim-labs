@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+
+[package]
+name = "signer"
+version = "0.1.0"
+edition = "2021"
+description = "Toy deterministic signature MODEL for the local claim-binding demo"
+license = "MIT AND Apache-2.0"
+
+[dependencies]
+claim-core = { path = "../claim-core" }

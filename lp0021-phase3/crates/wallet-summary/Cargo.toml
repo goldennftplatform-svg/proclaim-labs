@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "wallet-summary"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Structured transaction-effects summariser for the LP-0021 phase 3 local asset model."
+
+[dependencies]
+wallet-assets = { path = "../wallet-assets" }
