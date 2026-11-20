@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "testimonial-store"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Dependency-free in-memory model of LEZ testimonial_store semantics (NOT an on-chain program)."
+
+[dependencies]

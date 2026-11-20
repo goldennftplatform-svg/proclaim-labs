@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "adapters"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Sink boundary for a future real LEZ testimonial adapter; in-memory implementation only today."
+
+[dependencies]
+testimonial-store = { path = "../testimonial-store" }
