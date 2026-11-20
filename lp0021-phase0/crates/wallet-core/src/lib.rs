@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT AND Apache-2.0
+
 //! LP-0021 Phase 0 approval state machine.
 //!
 //! Protocol invariant (plan decision 3 / reliability R2 / proposed Tier 2):

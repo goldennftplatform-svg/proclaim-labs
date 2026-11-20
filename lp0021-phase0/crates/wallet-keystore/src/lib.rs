@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT AND Apache-2.0
+
 //! Encrypted-at-rest key persistence for LP-0021 (Phase 0).
 //!
 //! Uses libsodium (via `sodiumoxide`):

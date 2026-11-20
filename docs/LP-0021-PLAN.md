@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT AND Apache-2.0 -->
+
 # LP-0021 — Design & Implementation Plan (design task only)
 
 **Date:** 2026-11-19

@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MIT AND Apache-2.0 -->
+
 # LP-0021 Phase 0 — pure-Rust wallet core (action b)
 
 Date: 2026-11-19. Status: **reviewable staged deliverable**, not integrated into

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT AND Apache-2.0
+
 //! Core domain types for the LP-0021 wallet SDK (Phase 0).
 //!
 //! This crate is deliberately dependency-light: only `serde` is used, and all
