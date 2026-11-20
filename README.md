@@ -6,6 +6,11 @@ Honest, inspectable engineering scaffolding and research for the λPrize Logos
 RFPs **LP-0023** (Program Registry), **LP-0021** (Wallet + Provider SDK) and
 **LP-0001** (NFT Wallet + Private Proofs).
 
+**One independent builder, sharing work in public.** This is personal scaffolding
+offered for review and reuse — not a team submission, not a prize claim, and not
+a request for special treatment. Corrections and feedback from Logos maintainers
+and builders are welcome.
+
 **This repository is not a prize submission.** Nothing here has been submitted
 to any prize, nothing is deployed to a chain, and no solution PR has been
 opened. These are local workspaces that were built, tested, and verified so the
