@@ -1,0 +1,88 @@
+############ WORKSPACE: lp0023-claim-binding ############
+date_utc: 2026-11-20T07:36:23Z
+cwd: /mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0023-claim-binding
+############ COMMAND: cargo fmt --all -- --check ############
+############ EXIT_CODE fmt: 0 ############
+############ COMMAND: cargo clippy --workspace --all-targets -- -D warnings ############
+    Checking claim-core v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0023-claim-binding/claim-core)
+    Checking signer v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0023-claim-binding/signer)
+    Checking demo v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0023-claim-binding/demo)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.58s
+############ EXIT_CODE clippy: 0 ############
+############ COMMAND: cargo test --workspace --offline ############
+   Compiling claim-core v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0023-claim-binding/claim-core)
+   Compiling signer v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0023-claim-binding/signer)
+   Compiling demo v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0023-claim-binding/demo)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.40s
+     Running unittests src/lib.rs (target/debug/build/claim-core/9dbc6994f8783738/out/claim_core-9dbc6994f8783738)
+
+running 23 tests
+test tests::by_deployer_query_is_timestamp_monotonic ... ok
+test tests::by_program_query_is_timestamp_monotonic ... ok
+test tests::digest_changes_when_deployer_changes ... ok
+test tests::contains_reflects_accepted_pairs_only ... ok
+test tests::digest_is_equal_for_equal_claims ... ok
+test tests::duplicate_is_keyed_by_program_and_deployer_only ... ok
+test tests::digest_changes_when_timestamp_changes ... ok
+test tests::digest_changes_when_program_id_changes ... ok
+test tests::query_by_deployer_returns_only_matching_claims ... ok
+test tests::digest_serialisation_is_length_prefixed ... ok
+test tests::query_by_program_returns_only_matching_claims ... ok
+test tests::fnv1a64_of_empty_input_is_offset_basis ... ok
+test tests::query_by_unknown_program_is_empty ... ok
+test tests::digest_is_deterministic ... ok
+test tests::registry_rejects_a_duplicate_claim ... ok
+test tests::same_deployer_with_a_different_program_is_allowed ... ok
+test tests::registry_accepts_a_valid_claim ... ok
+test tests::registry_rejects_an_invalid_signature ... ok
+test tests::digest_changes_when_statement_changes ... ok
+test tests::same_program_with_a_different_deployer_is_allowed ... ok
+test tests::query_by_unknown_deployer_is_empty ... ok
+test tests::verification_result_strings_are_stable ... ok
+test tests::registry_rejects_an_unknown_deployer ... ok
+
+test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/build/demo/c9a9cdd304906302/out/claim_binding_demo-c9a9cdd304906302)
+
+running 3 tests
+test tests::demo_duplicate_differs_in_digest_but_not_in_binding_pair ... ok
+test tests::demo_produces_all_four_expected_results ... ok
+test tests::demo_rejections_do_not_grow_the_registry ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/build/signer/d5d3a712e7236bb5/out/signer-d5d3a712e7236bb5)
+
+running 14 tests
+test tests::different_seeds_produce_different_public_keys ... ok
+test tests::directory_as_verifier_accepts_an_honest_claim ... ok
+test tests::directory_as_verifier_rejects_a_wrong_key ... ok
+test tests::directory_as_verifier_rejects_an_unknown_deployer ... ok
+test tests::directory_reports_an_unknown_deployer_as_none ... ok
+test tests::directory_updates_an_existing_deployer_entry ... ok
+test tests::keypair_is_deterministic_from_seed ... ok
+test tests::signature_is_deterministic ... ok
+test tests::verify_accepts_an_honest_signature ... ok
+test tests::verify_rejects_a_signature_from_the_wrong_key ... ok
+test tests::verify_rejects_a_tampered_digest ... ok
+test tests::verify_rejects_an_all_zero_signature ... ok
+test tests::verify_rejects_modified_signature_bytes ... ok
+test tests::directory_maps_a_public_key_to_a_deployer ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests claim_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests signer
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+############ EXIT_CODE test: 0 ############
+############ TEST COUNT passed=40 failed=0 ############

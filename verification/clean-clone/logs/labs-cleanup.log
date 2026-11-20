@@ -1,0 +1,10 @@
+=== CLEANUP target/ DIRS ===
+./lp0001-phase0/target
+./lp0021-permissions/target
+./lp0021-phase0/target
+./lp0021-phase1/target
+./lp0021-phase2-testimonials/target
+./lp0021-phase3/target
+./lp0021-phase4-provider-protocol/target
+./lp0023-claim-binding/target
+remaining target dirs: 0

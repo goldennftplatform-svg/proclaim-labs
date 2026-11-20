@@ -1,0 +1,57 @@
+date_utc: 2026-11-20T07:34:32Z
+############ lp0001-phase0 ############
+CACHED    block-buffer-0.10.4
+CACHED    cfg-if-1.0.5
+CACHED    cpufeatures-0.2.17
+CACHED    crypto-common-0.1.7
+CACHED    digest-0.10.7
+CACHED    generic-array-0.14.7
+CACHED    itoa-1.0.19
+CACHED    libc-0.2.191
+NOT-CACHED membership-proof-0.1.0
+CACHED    memchr-2.8.3
+NOT-CACHED nft-provider-api-0.1.0
+NOT-CACHED nft-types-0.1.0
+CACHED    proc-macro2-1.0.107
+CACHED    quote-1.0.47
+CACHED    serde-1.0.229
+CACHED    serde_core-1.0.229
+CACHED    serde_derive-1.0.229
+CACHED    serde_json-1.0.154
+CACHED    sha2-0.10.9
+CACHED    syn-3.0.10
+CACHED    typenum-1.20.1
+CACHED    unicode-ident-1.0.27
+CACHED    version_check-0.9.5
+CACHED    zmij-1.0.23
+SUMMARY lp0001-phase0 cached=21 missing=3
+############ lp0021-phase0 ############
+CACHED    cc-1.11.2
+CACHED    ed25519-1.5.3
+CACHED    find-msvc-tools-0.1.15
+CACHED    itoa-1.0.19
+CACHED    libc-0.2.191
+CACHED    libsodium-sys-0.2.7
+CACHED    memchr-2.8.3
+CACHED    pkg-config-0.3.34
+CACHED    proc-macro2-1.0.107
+CACHED    quote-1.0.47
+CACHED    same-file-1.0.6
+CACHED    serde-1.0.229
+CACHED    serde_core-1.0.229
+CACHED    serde_derive-1.0.229
+CACHED    serde_json-1.0.154
+CACHED    shlex-2.0.1
+CACHED    signature-1.6.4
+CACHED    sodiumoxide-0.2.7
+CACHED    syn-3.0.10
+CACHED    unicode-ident-1.0.27
+CACHED    walkdir-2.5.0
+NOT-CACHED wallet-core-0.1.0
+NOT-CACHED wallet-keystore-0.1.0
+NOT-CACHED wallet-types-0.1.0
+NOT-CACHED winapi-util-0.1.11
+NOT-CACHED windows-link-0.2.1
+NOT-CACHED windows-sys-0.61.2
+CACHED    zmij-1.0.23
+SUMMARY lp0021-phase0 cached=22 missing=6

@@ -1,0 +1,22 @@
+date_utc: 2026-11-20T07:34:46Z
+############ COMMAND: ./bin/verify-source base58 4df7d5396b68a16aae6d0f768ef447a0055eb43866827154f71139e486265144 ############
+6FMaVQ6CmbAVNHgwsmmeBe5kiiKkQRFtqu4GUQ2vAf2T
+EXIT_CODE: 0
+
+############ COMMAND: ./bin/verify-source base58 ABCD ############
+ERROR: expected 64 lowercase hex characters
+EXIT_CODE: 1
+
+############ COMMAND: ./bin/verify-source base58 zzzz ############
+ERROR: expected 64 lowercase hex characters
+EXIT_CODE: 1
+
+############ self-test from different cwd ############
+PASS: base58 known vector
+PASS: base58 all-zero vector
+PASS: reject short hex
+PASS: reject non-hex
+PASS: reject missing binary
+PASS: usage exit code
+self-test: all checks passed
+EXIT_CODE: 0

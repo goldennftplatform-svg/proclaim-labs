@@ -1,0 +1,103 @@
+############ WORKSPACE: lp0021-phase1 ############
+date_utc: 2026-11-20T07:35:27Z
+cwd: /mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase1
+############ COMMAND: cargo fmt --all -- --check ############
+############ EXIT_CODE fmt: 0 ############
+############ COMMAND: cargo clippy --workspace --all-targets -- -D warnings ############
+    Checking wallet-chain v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase1/crates/wallet-chain)
+    Checking wallet-cli v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase1/crates/wallet-cli)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.79s
+############ EXIT_CODE clippy: 0 ############
+############ COMMAND: cargo test --workspace --offline ############
+   Compiling wallet-chain v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase1/crates/wallet-chain)
+   Compiling wallet-cli v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase1/crates/wallet-cli)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 13.55s
+     Running unittests src/lib.rs (target/debug/build/wallet-chain/4d23c0668c40267a/out/wallet_chain-4d23c0668c40267a)
+
+running 15 tests
+test tests::out_of_order_nonce_is_rejected ... ok
+test tests::insufficient_balance_is_rejected ... ok
+test tests::native_asset_aggregates_public_and_private_balances ... ok
+test tests::account_ids_are_opaque_and_kinds_distinct ... ok
+test tests::private_transfer_uses_distinct_event_shape ... ok
+test tests::history_is_scoped_and_does_not_leak_across_accounts ... ok
+test tests::nonce_replay_is_rejected ... ok
+test tests::external_credit_replays_and_is_per_asset ... ok
+test tests::public_transfer_moves_balances_and_records_history ... ok
+test tests::receive_handles_are_opaque_and_kind_specific ... ok
+test tests::replay_reconstructs_balances_history_and_nonces ... ok
+test tests::replay_rejects_duplicate_account_open ... ok
+test tests::replay_rejects_tampered_digest_and_commitment ... ok
+test tests::transaction_hash_is_deterministic_and_field_sensitive ... ok
+test tests::zero_amount_and_self_transfer_are_rejected ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/build/wallet-cli/2774bb37a78e0c2c/out/wallet_cli-2774bb37a78e0c2c)
+
+running 32 tests
+test approval::tests::state_names_are_stable ... ok
+test approval::tests::request_ids_round_trip_and_are_padded ... ok
+test approval::tests::explicit_approver_rejects_wrong_account_without_granting ... ok
+test approval::tests::effects_include_private_account_honesty_warning ... ok
+test args::tests::rejects_unknown_command_and_flag ... ok
+test args::tests::rejects_missing_and_duplicate_values ... ok
+test consent::tests::foreign_dapp_id_is_unrecognized ... ok
+test args::tests::rejects_invalid_values_and_wrong_scope_flags ... ok
+test consent::tests::grants_are_single_capability_and_individually_revocable ... ok
+test consent::tests::store_denies_everything_by_default ... ok
+test args::tests::parses_approve_and_reject_with_bindings ... ok
+test consent::tests::wrong_scope_reports_scope_mismatch ... ok
+test args::tests::parses_all_required_commands ... ok
+test args::tests::accepts_inline_flag_values_and_split_scripts ... ok
+test runtime::tests::no_approval_means_no_signature_and_no_submission ... ok
+test runtime::tests::exact_approval_signs_and_submits_once ... ok
+test dispatch::tests::dispatcher_reports_approval_gate_errors ... ok
+test runtime::tests::approval_replay_fails ... ok
+test runtime::tests::deny_by_default_blocks_proposal_and_approval ... ok
+test dispatch::tests::dispatcher_receive_and_reject_commands ... ok
+test runtime::tests::insufficient_balance_is_rejected_at_proposal_time ... ok
+test runtime::tests::receive_generates_opaque_handles ... ok
+test runtime::tests::public_and_private_sends_have_same_balance_invariants ... ok
+test runtime::tests::reject_then_approve_fails ... ok
+test runtime::tests::restart_replays_events_and_drops_pending_proposals ... ok
+test runtime::tests::revoking_sign_capability_blocks_approval ... ok
+test runtime::tests::send_only_creates_a_pending_proposal ... ok
+test runtime::tests::signer_failure_marks_proposal_failed_without_submission ... ok
+test runtime::tests::wrong_approver_fails_before_signing ... ok
+test runtime::tests::wrong_amount_nonce_or_destination_binding_fails ... ok
+test runtime::tests::wrong_scope_is_reported_instead_of_plain_denial ... ok
+test dispatch::tests::dispatcher_runs_balance_send_approve_history_restart ... ok
+
+test result: ok. 32 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/main.rs (target/debug/build/wallet-cli/1529e6b0a74c2d53/out/wallet_cli-1529e6b0a74c2d53)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/e2e.rs (target/debug/build/wallet-cli/b4f847ea0ab48102/out/e2e-b4f847ea0ab48102)
+
+running 4 tests
+test deny_by_default_prevents_any_proposal ... ok
+test public_send_is_inert_until_exact_approval ... ok
+test private_send_keeps_balance_parity_and_replay_fails ... ok
+test restart_reconstructs_balances_and_clears_pending_state ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests wallet_chain
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests wallet_cli
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+############ EXIT_CODE test: 0 ############
+############ TEST COUNT passed=51 failed=0 ############

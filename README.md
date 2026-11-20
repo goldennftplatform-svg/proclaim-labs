@@ -28,14 +28,14 @@ Licensed **MIT AND Apache-2.0** — both licenses apply. See `LICENSE-MIT` and
 | --- | --- | --- | --- |
 | `lp0001-phase0/` | LP-0001 | 44 passing | **Test fixture only.** Locks down the private-transfer statement, public inputs, check order, replay/freshness and error codes. The backend is an explicitly labelled **mock — not zero-knowledge, no privacy claim.** |
 | `lp0021-permissions/` | LP-0021, LP-0001 | 23 passing | Deny-by-default consent/permission store. Zero dependencies. Shared by the wallet and the NFT-proof work. |
-| `lp0021-phase0/` | LP-0021 | 20 passing | Secure-core types: opaque accounts, keystore abstraction, wallet core. Adapter-based; no on-chain wallet. |
+| `lp0021-phase0/` | LP-0021 | 23 passing | Secure-core types: opaque accounts, keystore abstraction, wallet core. Adapter-based; no on-chain wallet. |
 | `lp0021-phase1/` | LP-0021 | 51 passing | Local wallet vertical slice: ledger replay, per-asset balances, approval-gated send/receive, restart reconstruction. In-memory only. |
 | `lp0021-phase2-testimonials/` | LP-0021 | 50 passing | Local `testimonial_store` model. Not an on-chain program. |
 | `lp0021-phase3/` | LP-0021 | 50 passing | Local token ledger, opaque private-account handles and human-readable effects summary. Opaque handles are **not** real privacy. |
 | `lp0023-claim-binding/` | LP-0023 | 40 passing | Deployer-claim rejection demo. Toy signature **model**, not real cryptography or on-chain binding. |
 | `lp0021-phase4-provider-protocol/` | LP-0021 | 45 passing | Local versioned request/response envelopes, correlation IDs, retry/dedupe, cancel/timeout and payload-free audit log. In-memory model only, **not** real transport or privacy. |
 
-**Total: 323 passing tests across eight workspaces.** Every workspace passes `cargo fmt --all -- --check`,
+**Total: 326 passing tests across eight workspaces.** Every workspace passes `cargo fmt --all -- --check`,
 `cargo clippy --workspace --all-targets -- -D warnings` with no warnings, and a
 secret scan. Source files carry SPDX `MIT AND Apache-2.0`. Build artifacts
 (`target/`) are not included.
@@ -47,6 +47,11 @@ diagnosis of why a clean CI rebuild produced a different guest image ID than
 the deployed artifact (path-dependent ELF metadata; fix pushed, run pending),
 and `docs/LP-0023-SELF-ASSESSMENT.md`, an honest criterion-by-criterion status
 including every unmet item and all zero adoption counters.
+
+Fresh-clone verification on 2026-11-20 measured 326 tests, not the 323
+previously published here: `lp0021-phase0` has 23 tests, not 20. The raw
+commands, logs and caveats are in [`verification/clean-clone/`](verification/clean-clone/FINDINGS.md).
+That report is local reproduction, not third-party review or prize credit.
 
 Each workspace has its own `README.md` and `RESULT.md` with the exact commands
 and results. Re-run them locally; do not take the table on trust.

@@ -1,0 +1,104 @@
+############ WORKSPACE: lp0021-phase2-testimonials ############
+date_utc: 2026-11-20T07:35:45Z
+cwd: /mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase2-testimonials
+############ COMMAND: cargo fmt --all -- --check ############
+############ EXIT_CODE fmt: 0 ############
+############ COMMAND: cargo clippy --workspace --all-targets -- -D warnings ############
+    Checking testimonial-store v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase2-testimonials/crates/testimonial-store)
+    Checking adapters v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase2-testimonials/crates/adapters)
+    Checking monthly-report v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase2-testimonials/crates/monthly-report)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.83s
+############ EXIT_CODE clippy: 0 ############
+############ COMMAND: cargo test --workspace --offline ############
+   Compiling testimonial-store v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase2-testimonials/crates/testimonial-store)
+   Compiling monthly-report v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase2-testimonials/crates/monthly-report)
+   Compiling adapters v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase2-testimonials/crates/adapters)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.48s
+     Running unittests src/lib.rs (target/debug/build/adapters/8335b41a446c1a05/out/adapters-8335b41a446c1a05)
+
+running 7 tests
+test tests::in_memory_sink_stores_and_lists ... ok
+test tests::sink_can_be_used_behind_a_trait_object ... ok
+test tests::sink_rejects_duplicate_author ... ok
+test tests::sink_rejects_decreasing_timestamp ... ok
+test tests::submit_helper_reports_field_validation_errors ... ok
+test tests::sink_reports_its_non_chain_label ... ok
+test tests::unavailable_backend_is_an_explicit_error ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/build/monthly-report/13783d2e7a9eaac3/out/monthly_report-13783d2e7a9eaac3)
+
+running 13 tests
+test tests::counts_records_per_utc_month ... ok
+test tests::month_boundary_counts_are_separate ... ok
+test tests::monthly_counts_are_empty_by_default ... ok
+test tests::counts_distinct_authors_per_month ... ok
+test tests::threshold_fails_with_fewer_than_150_distinct_authors ... ok
+test tests::threshold_fails_with_29_records_in_a_month ... ok
+test tests::threshold_fails_with_149_distinct_authors ... ok
+test tests::threshold_fails_with_non_consecutive_months ... ok
+test tests::threshold_with_zero_records_is_not_met ... ok
+test tests::threshold_result_is_labelled_as_a_local_model ... ok
+test tests::threshold_fails_with_only_one_qualifying_month ... ok
+test tests::threshold_passes_at_exact_edges ... ok
+test tests::threshold_prefers_longest_consecutive_run ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/build/testimonial-store/297e5268f50d9047/out/testimonial_store-297e5268f50d9047)
+
+running 30 tests
+test tests::empty_submission_id_is_rejected ... ok
+test tests::empty_text_is_rejected ... ok
+test tests::empty_username_is_rejected ... ok
+test tests::fixed_submission_id_is_frozen ... ok
+test tests::list_for_month_with_no_records_is_empty ... ok
+test tests::list_for_submission_filters_by_id ... ok
+test tests::duplicate_author_is_rejected ... ok
+test tests::decreasing_timestamp_is_rejected ... ok
+test tests::negative_timestamp_is_rejected ... ok
+test tests::oversized_text_is_rejected ... ok
+test tests::oversized_username_is_rejected ... ok
+test tests::list_for_unknown_submission_is_empty ... ok
+test tests::append_order_is_preserved ... ok
+test tests::equal_timestamp_is_accepted ... ok
+test tests::different_authors_are_accepted ... ok
+test tests::list_for_month_filters_utc_months ... ok
+test tests::record_id_changes_with_text ... ok
+test tests::record_id_is_deterministic ... ok
+test tests::submission_id_unchecked_is_a_fixture_handle_only ... ok
+test tests::store_is_empty_on_creation ... ok
+test tests::tampered_record_is_detected ... ok
+test tests::text_at_the_length_bound_is_accepted ... ok
+test tests::username_at_the_length_bound_is_accepted ... ok
+test tests::utc_month_floors_negative_epoch_timestamps ... ok
+test tests::utc_month_maps_leap_day_and_year_boundary ... ok
+test tests::utc_month_next_crosses_year_boundary ... ok
+test tests::valid_testimonial_has_a_valid_record_id ... ok
+test tests::whitespace_only_text_is_rejected ... ok
+test tests::wrong_submission_id_is_rejected_by_store ... ok
+test tests::submission_id_parse_rejects_everything_but_the_fixed_id ... ok
+
+test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests adapters
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests monthly_report
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests testimonial_store
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+############ EXIT_CODE test: 0 ############
+############ TEST COUNT passed=50 failed=0 ############

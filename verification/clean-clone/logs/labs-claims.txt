@@ -1,0 +1,201 @@
+date_utc: 2026-11-20T07:34:09Z
+############ lp0001-phase0 ############
+--- README.md claimed tests/commands ---
+1:<!-- SPDX-License-Identifier: MIT AND Apache-2.0 -->
+47:wsl bash -c 'set -e; source ~/.cargo/env; export CARGO_BUILD_JOBS=2; cd /mnt/c/Users/XPS/Downloads/GFD/staged/lp0001-phase0; cargo fmt --all; cargo fmt --all -- --check; cargo clippy --workspace --all-targets -- -D warnings; cargo test --workspace'
+56:cargo fmt --all -- --check
+57:cargo clippy --workspace --all-targets -- -D warnings
+58:cargo test --workspace
+68:| `cargo fmt --all -- --check` | exit 0, no diffs |
+69:| `cargo clippy --workspace --all-targets -- -D warnings` | exit 0, 0 warnings |
+70:| `cargo test --workspace` | exit 0, **44 passed / 0 failed** (nft-types 6, membership-proof 18, nft-provider-api 20; 0 doc tests) |
+110:SPDX-License-Identifier: MIT AND Apache-2.0
+--- RESULT.md claimed results ---
+15:cargo fmt --all -- --check
+18:Exit code `0`. No output, no diffs. (`cargo fmt --all` was run beforehand to
+24:cargo clippy --workspace --all-targets -- -D warnings
+41:cargo test --workspace
+48:running 18 tests
+49:test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+52:running 20 tests
+53:test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+56:running 6 tests
+57:test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+59:Doc-tests membership_proof: 0 passed; 0 failed
+60:Doc-tests nft_provider_api: 0 passed; 0 failed
+61:Doc-tests nft_types: 0 passed; 0 failed
+74:| `crates/nft-types/src/lib.rs` | Opaque `AccountRef`, asset/grouping/gate/request types, capability set, error taxonomy, 6 tests. |
+76:| `crates/membership-proof/src/lib.rs` | `MembershipPublicInputs`, nullifier, freshness, deterministic `evaluate()`, parity backends, 18 tests. |
+79:| `crates/nft-provider-api/src/lib.rs` | Adapter traits, mocks, `DenyAll`, capability-enforcing `ProofCoordinator`, 20 tests. |
+
+############ lp0021-permissions ############
+--- README.md claimed tests/commands ---
+3:**SPDX-License-Identifier: MIT AND Apache-2.0**
+23:├── check_fmt.sh               # helper: cargo fmt --all -- --check
+24:├── check_clippy.sh            # helper: cargo clippy ... -D warnings
+25:├── check_test.sh              # helper: cargo test --workspace
+29:    └── src/lib.rs             # all types, store, coordinator, 23 tests
+133:cargo fmt --all -- --check
+134:cargo clippy --workspace --all-targets -- -D warnings
+135:cargo test --workspace
+--- RESULT.md claimed results ---
+25:Command: `cargo fmt --all -- --check`
+28:+ cargo fmt --all -- --check
+29:+ exit code: 0
+34:Command: `cargo clippy --workspace --all-targets -- -D warnings`
+37:+ cargo clippy --workspace --all-targets -- -D warnings
+40:+ exit code: 0
+45:Command: `cargo test --workspace`
+48:+ cargo test --workspace
+53:running 23 tests
+78:test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+82:running 0 tests
+84:test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+86:+ exit code: 0
+90:the set of 23 tests and the final result are as shown.
+96:| Format | `cargo fmt --all -- --check` | PASS (exit 0) |
+97:| Lint | `cargo clippy --workspace --all-targets -- -D warnings` | PASS (exit 0) |
+98:| Tests | `cargo test --workspace` | PASS — 23 passed, 0 failed (exit 0) |
+
+############ lp0021-phase0 ############
+--- README.md claimed tests/commands ---
+1:<!-- SPDX-License-Identifier: MIT AND Apache-2.0 -->
+119:cargo test --workspace
+121:cargo fmt --all -- --check
+122:cargo clippy --workspace --all-targets -- -D warnings
+125:Results: **23 tests passed** (wallet-core 12, wallet-keystore 6, wallet-types 5;
+126:0 doc tests), `cargo fmt --check` clean, `cargo clippy -D warnings` clean.
+135:  crates. Both `cargo test --workspace` without it and with that exact global
+--- RESULT.md claimed results ---
+
+############ lp0021-phase1 ############
+--- README.md claimed tests/commands ---
+3:**SPDX-License-Identifier: MIT AND Apache-2.0**
+52:| `check_fmt.sh` | Helper: `cargo fmt --all -- --check`. |
+53:| `check_clippy.sh` | Helper: `cargo clippy --workspace --all-targets -- -D warnings`. |
+54:| `check_test.sh` | Helper: `cargo test --workspace`. |
+63:`SPDX-License-Identifier: MIT AND Apache-2.0` header.
+90:cargo fmt --all -- --check
+91:cargo clippy --workspace --all-targets -- -D warnings
+92:cargo test --workspace
+101:| `cargo fmt --all -- --check` | 0 | clean, no diff |
+102:| `cargo clippy --workspace --all-targets -- -D warnings` | 0 | no warnings |
+103:| `cargo test --workspace` | 0 | 51 passed, 0 failed |
+--- RESULT.md claimed results ---
+9:exit code 0. No `RUSTFLAGS` were set. No keys, tokens, credentials, git
+12:## Exact commands and exit codes
+16:| 1 | `cargo fmt --all -- --check` | 0 | Clean; no formatting diff. |
+17:| 2 | `cargo clippy --workspace --all-targets -- -D warnings` | 0 | No warnings or errors. |
+18:| 3 | `cargo test --workspace` | 0 | All tests passed. |
+62:| `crates/wallet-chain/src/lib.rs` | Ledger simulator, events/replay, hashes, simulated private handles; 15 tests. |
+65:| `crates/wallet-cli/src/args.rs` | Zero-dependency CLI parser; 6 tests. |
+66:| `crates/wallet-cli/src/approval.rs` | Local approval state machine; 4 tests. |
+67:| `crates/wallet-cli/src/consent.rs` | Local deny-by-default consent store; 4 tests. |
+68:| `crates/wallet-cli/src/runtime.rs` | Adapter-based runtime, mock signer, demo runtime; 15 tests. |
+69:| `crates/wallet-cli/src/dispatch.rs` | Command dispatcher; 3 tests. |
+71:| `crates/wallet-cli/tests/e2e.rs` | End-to-end integration tests; 4 tests. |
+76:| `run_checks.sh` | Runs the three checks and reports exit codes. |
+
+############ lp0021-phase2-testimonials ############
+--- README.md claimed tests/commands ---
+1:<!-- SPDX-License-Identifier: MIT AND Apache-2.0 -->
+25:├── check_fmt.sh               # cargo fmt --all -- --check
+26:├── check_clippy.sh            # cargo clippy --workspace --all-targets -- -D warnings
+27:├── check_test.sh              # cargo test --workspace
+98:| `cargo fmt --all -- --check` | exit 0, no diff |
+99:| `cargo clippy --workspace --all-targets -- -D warnings` | exit 0, no warnings |
+100:| `cargo test --workspace` | exit 0, **50 passed, 0 failed** (30 store, 13 monthly-report, 7 adapters; 0 doc-tests) |
+--- RESULT.md claimed results ---
+29:exit codes of the commands themselves.
+33:Command: `cargo fmt --all -- --check`
+41:Command: `cargo clippy --workspace --all-targets -- -D warnings`
+55:Command: `cargo test --workspace`
+64:running 7 tests
+73:test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+77:running 13 tests
+92:test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+96:running 30 tests
+128:test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+132:running 0 tests
+134:test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+138:running 0 tests
+140:test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+144:running 0 tests
+146:test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+156:| Format | `cargo fmt --all -- --check` | 0 | Clean; no diff |
+157:| Lint | `cargo clippy --workspace --all-targets -- -D warnings` | 0 | No warnings |
+158:| Tests | `cargo test --workspace` | 0 | 50 passed, 0 failed |
+201:| `crates/testimonial-store/Cargo.toml`, `crates/testimonial-store/src/lib.rs` | Core model and 30 tests |
+202:| `crates/monthly-report/Cargo.toml`, `crates/monthly-report/src/lib.rs` | Monthly shape model and 13 tests |
+203:| `crates/adapters/Cargo.toml`, `crates/adapters/src/lib.rs` | Sink boundary, in-memory sink, 7 tests |
+
+############ lp0021-phase3 ############
+--- README.md claimed tests/commands ---
+1:SPDX-License-Identifier: MIT AND Apache-2.0
+41:| `crates/wallet-assets/src/lib.rs` | `AssetId::{Native, Mint(MintId)}`, `AccountKind::{Public, Private}`, opaque `PrivateHandle`, `TokenMeta`, `Balance`, `AmountBound`, `Approval`, `TokenLedger`, mint/burn, public/private/cross transfers, allowances, per-account per-asset balance queries, event log; 30 tests. |
+43:| `crates/wallet-bridge/src/lib.rs` | `TokenProgram` trait with `InMemoryTokenProgram` and `UnavailableTokenProgram`, `MintDiscovery` trait with in-memory and unavailable implementations, and `PrivateAccountRegistry` that never puts handles in errors or logs; 10 tests. |
+45:| `crates/wallet-summary/src/lib.rs` | Structured `Effect` data, `summarise(...)`, decimal unit formatting and explicit unlimited-approval warnings; 10 tests. |
+55:`SPDX-License-Identifier: MIT AND Apache-2.0` header (as a comment where the
+103:cargo fmt --all -- --check
+104:cargo clippy --workspace --all-targets -- -D warnings
+105:cargo test --workspace
+112:| `cargo fmt --all -- --check` | 0 | Clean; no formatting diff. |
+113:| `cargo clippy --workspace --all-targets -- -D warnings` | 0 | No warnings. |
+114:| `cargo test --workspace` | 0 | 50 passed, 0 failed. |
+--- RESULT.md claimed results ---
+9:All three passed with exit code 0. `RUSTFLAGS` was left unset. No Docker, git
+13:## Exact commands and exit codes
+17:| 1 | `cargo fmt --all -- --check` | 0 | Clean; no formatting diff. |
+18:| 2 | `cargo clippy --workspace --all-targets -- -D warnings` | 0 | No warnings or errors. |
+19:| 3 | `cargo test --workspace` | 0 | All tests passed. |
+22:which reported `FMT_EXIT=0`, `CLIPPY_EXIT=0`, `TEST_EXIT=0`.
+61:| `crates/wallet-assets/src/lib.rs` | Asset/account/approval/ledger types and 30 tests. |
+63:| `crates/wallet-bridge/src/lib.rs` | `TokenProgram`, in-memory and unavailable adapters, `MintDiscovery`, `PrivateAccountRegistry`, 10 tests. |
+65:| `crates/wallet-summary/src/lib.rs` | Structured effects summariser and 10 tests. |
+69:| `run_checks.sh` | Runs the three checks and reports exit codes. |
+
+############ lp0021-phase4-provider-protocol ############
+--- README.md claimed tests/commands ---
+1:SPDX-License-Identifier: MIT AND Apache-2.0
+41:| `crates/protocol-core/src/lib.rs` | `RequestId`, `ProtocolVersion`, `Method`, `Payload`, `Request`, `Response`, `ProtocolError`, deterministic text codec; 18 tests. |
+43:| `crates/provider-transport/src/lib.rs` | `Transport`, `InMemoryTransport`, `OfflineTransport`, `RetryPolicy`, `ReliableTransport`, `AuditLog`; 20 tests. |
+45:| `crates/conformance/src/main.rs` | Scripted four-method exchange, transient failure/retry, correlation probe and readable transcript; 7 tests. |
+57:`SPDX-License-Identifier: MIT AND Apache-2.0` (comment-prefixed where the file
+124:cargo fmt --all -- --check
+125:cargo clippy --workspace --all-targets -- -D warnings
+126:cargo test --workspace
+131:| `cargo fmt --all -- --check` | 0 | Clean; no formatting diff. |
+132:| `cargo clippy --workspace --all-targets -- -D warnings` | 0 | No warnings. |
+133:| `cargo test --workspace` | 0 | 45 passed, 0 failed. |
+--- RESULT.md claimed results ---
+9:All three passed with exit code 0. `RUSTFLAGS` was left unset. No Docker, git
+13:## Exact commands and exit codes
+17:| 1 | `cargo fmt --all -- --check` | 0 | Clean; no formatting diff. |
+18:| 2 | `cargo clippy --workspace --all-targets -- -D warnings` | 0 | No warnings or errors. |
+19:| 3 | `cargo test --workspace` | 0 | All tests passed. |
+22:`FMT_EXIT=0`, `CLIPPY_EXIT=0`, `TEST_EXIT=0`.
+93:| `crates/protocol-core/src/lib.rs` | Opaque ids, version negotiation, methods, codec, taxonomy; 18 tests. |
+95:| `crates/provider-transport/src/lib.rs` | `Transport`, in-memory/offline implementations, reliable wrapper, audit log; 20 tests. |
+97:| `crates/conformance/src/main.rs` | Scripted exchange, correlation probe, transcript; 7 tests. |
+101:| `run_checks.sh` | Runs the three checks and reports exit codes. |
+
+############ lp0023-claim-binding ############
+--- README.md claimed tests/commands ---
+1:<!-- SPDX-License-Identifier: MIT AND Apache-2.0 -->
+52:`SPDX-License-Identifier: MIT AND Apache-2.0`. There are no crates.io
+63:cargo fmt --all -- --check                       # exit 0
+64:cargo clippy --workspace --all-targets -- -D warnings  # exit 0
+65:cargo test --workspace                           # exit 0
+71:`cargo test --workspace` result: **40 passed, 0 failed, 0 ignored**;
+72:`claim-core` 23, `demo` 3, `signer` 14; both doc-test targets 0 tests, all
+--- RESULT.md claimed results ---
+8:4. `cargo fmt --all -- --check`, `cargo clippy --workspace --all-targets -- -D warnings` and `cargo test --workspace` all exit 0; 40 tests pass (23 + 3 + 14).
+34:| `cargo fmt --all -- --check` | 0 | No formatting differences |
+35:| `cargo clippy --workspace --all-targets -- -D warnings` | 0 | `Finished dev profile`; no warnings |
+36:| `cargo test --workspace` | 0 | 40 passed, 0 failed, 0 ignored |
+39:Per-target test counts from `cargo test --workspace`:
+40:`claim-core` unittests 23 passed / 0 failed; `demo` unittests 3 passed / 0 failed;
+41:`signer` unittests 14 passed / 0 failed; `Doc-tests claim_core` 0 tests;
+42:`Doc-tests signer` 0 tests. All five `test result: ok` lines were emitted.
+44:An intermediate `cargo clippy --workspace --all-targets -- -D warnings` run exited
+

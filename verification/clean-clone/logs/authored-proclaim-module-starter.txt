@@ -1,0 +1,9 @@
+README.md
+clients/js/README.md
+clients/js/search.mjs
+docs/INTEGRATION-CHECKLIST.md
+examples/register_and_search.rs
+src/lib.rs
+ui/Main.qml
+ui/registry_backend.cpp
+ui/registry_backend.h

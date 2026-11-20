@@ -1,0 +1,93 @@
+############ WORKSPACE: lp0021-phase4-provider-protocol ############
+date_utc: 2026-11-20T07:36:10Z
+cwd: /mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase4-provider-protocol
+############ COMMAND: cargo fmt --all -- --check ############
+############ EXIT_CODE fmt: 0 ############
+############ COMMAND: cargo clippy --workspace --all-targets -- -D warnings ############
+    Checking protocol-core v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase4-provider-protocol/crates/protocol-core)
+    Checking provider-transport v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase4-provider-protocol/crates/provider-transport)
+    Checking conformance v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase4-provider-protocol/crates/conformance)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.48s
+############ EXIT_CODE clippy: 0 ############
+############ COMMAND: cargo test --workspace --offline ############
+   Compiling protocol-core v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase4-provider-protocol/crates/protocol-core)
+   Compiling provider-transport v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase4-provider-protocol/crates/provider-transport)
+   Compiling conformance v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase4-provider-protocol/crates/conformance)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.66s
+     Running unittests src/main.rs (target/debug/build/conformance/8878a33946b0247e/out/conformance-8878a33946b0247e)
+
+running 7 tests
+test tests::reliable_error_display_never_mentions_handles ... ok
+test tests::approve_precedes_sign_message ... ok
+test tests::conformance_report_passes_all_checks ... ok
+test tests::audit_lines_have_no_payload_field ... ok
+test tests::transcript_shows_retry_and_clean_audit ... ok
+test tests::mismatched_response_is_rejected ... ok
+test tests::conformance_uses_v1_and_opaque_ids ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/build/protocol-core/4a8a7311dc6c10e6/out/protocol_core-4a8a7311dc6c10e6)
+
+running 18 tests
+test tests::all_method_variants_have_stable_text_forms ... ok
+test tests::error_taxonomy_marks_only_transport_failures_transient ... ok
+test tests::errors_never_contain_handles_or_private_payloads ... ok
+test tests::method_parse_rejects_unknown_name ... ok
+test tests::request_id_display_and_parse_roundtrip ... ok
+test tests::payload_escaping_roundtrips_delimiters ... ok
+test tests::request_id_parse_rejects_garbage ... ok
+test tests::request_id_new_is_fresh ... ok
+test tests::request_text_roundtrip_is_deterministic ... ok
+test tests::request_validate_rejects_unsupported_version ... ok
+test tests::response_error_text_roundtrip_and_full_taxonomy ... ok
+test tests::response_ok_text_roundtrip ... ok
+test tests::response_rejects_both_result_and_error ... ok
+test tests::response_rejects_neither_result_nor_error ... ok
+test tests::response_text_parse_rejects_invalid_shapes ... ok
+test tests::unsupported_version_is_rejected ... ok
+test tests::version_text_roundtrip_and_parse_failure ... ok
+test tests::version_v1_negotiates ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/build/provider-transport/cdc20977740c23ee/out/provider_transport-cdc20977740c23ee)
+
+running 20 tests
+test tests::backoff_is_deterministic_and_bounded ... ok
+test tests::in_memory_transport_can_override_results ... ok
+test tests::cancel_before_response_is_honoured ... ok
+test tests::duplicate_response_for_completed_id_is_rejected ... ok
+test tests::cancel_after_completion_is_rejected ... ok
+test tests::audit_and_errors_never_leak_payload_handles ... ok
+test tests::audit_records_only_method_id_and_outcome ... ok
+test tests::cancel_before_send_prevents_delivery ... ok
+test tests::audit_covers_all_four_conformance_methods ... ok
+test tests::matching_response_is_accepted ... ok
+test tests::mismatched_response_id_is_rejected ... ok
+test tests::non_transient_protocol_error_is_not_retried ... ok
+test tests::offline_transport_fails_loudly ... ok
+test tests::policy_max_attempts_is_never_zero ... ok
+test tests::retry_exhaustion_is_reported ... ok
+test tests::timeout_after_transient_failure_stops_retry ... ok
+test tests::timeout_is_enforced_with_virtual_clock ... ok
+test tests::in_memory_transport_returns_scripted_result ... ok
+test tests::transient_failure_can_be_targeted_to_one_request_id ... ok
+test tests::transient_failure_is_retried_then_succeeds ... ok
+
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests protocol_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests provider_transport
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+############ EXIT_CODE test: 0 ############
+############ TEST COUNT passed=45 failed=0 ############

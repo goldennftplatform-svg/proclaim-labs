@@ -1,0 +1,4 @@
+date_utc: 2026-11-20T07:33:50Z
+lgs path: /home/xps/.cargo/bin/lgs
+lgs version: logos-scaffold 0.5.0
+note: earlier starter-checks.log reported lgs MISSING because ~/.cargo/env was not sourced; corrected here.

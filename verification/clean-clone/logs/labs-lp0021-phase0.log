@@ -1,0 +1,110 @@
+############ WORKSPACE: lp0021-phase0 ############
+date_utc: 2026-11-20T07:24:01Z
+cwd: /mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase0
+############ COMMAND: cargo fmt --all -- --check ############
+############ EXIT_CODE fmt: 0 ############
+############ COMMAND: cargo clippy --workspace --all-targets -- -D warnings ############
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling serde_core v1.0.229
+   Compiling syn v3.0.10
+   Compiling serde v1.0.229
+   Compiling find-msvc-tools v0.1.15
+   Compiling same-file v1.0.6
+   Compiling shlex v2.0.1
+   Compiling cc v1.11.2
+   Compiling serde_derive v1.0.229
+   Compiling walkdir v2.5.0
+   Compiling zmij v1.0.23
+   Compiling libc v0.2.191
+   Compiling pkg-config v0.3.34
+   Compiling libsodium-sys v0.2.7
+   Compiling serde_json v1.0.154
+    Checking wallet-types v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase0/crates/wallet-types)
+    Checking memchr v2.8.3
+    Checking itoa v1.0.19
+    Checking signature v1.6.4
+    Checking ed25519 v1.5.3
+    Checking wallet-core v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase0/crates/wallet-core)
+    Checking sodiumoxide v0.2.7
+    Checking wallet-keystore v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase0/crates/wallet-keystore)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 10m 47s
+############ EXIT_CODE clippy: 0 ############
+############ COMMAND: cargo test --workspace --offline ############
+   Compiling serde_core v1.0.229
+   Compiling serde v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling zmij v1.0.23
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.19
+   Compiling libc v0.2.191
+   Compiling wallet-types v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase0/crates/wallet-types)
+   Compiling signature v1.6.4
+   Compiling ed25519 v1.5.3
+   Compiling libsodium-sys v0.2.7
+   Compiling sodiumoxide v0.2.7
+   Compiling wallet-core v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase0/crates/wallet-core)
+   Compiling wallet-keystore v0.1.0 (/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/proclaim-labs/lp0021-phase0/crates/wallet-keystore)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 34.33s
+     Running unittests src/lib.rs (target/debug/build/wallet-core/03285b49dc38a991/out/wallet_core-03285b49dc38a991)
+
+running 12 tests
+test tests::mismatch_verification_is_flagged_in_the_prompt ... ok
+test tests::negative_authorizer_denial_keeps_request_unapproved ... ok
+test tests::negative_sign_without_explicit_authorize_is_blocked ... ok
+test tests::propose_builds_human_readable_effects_and_waits ... ok
+test tests::happy_path_authorize_then_sign_and_submit ... ok
+test tests::rejected_request_can_never_be_signed ... ok
+test tests::request_ids_are_unique ... ok
+test tests::negative_failed_registry_and_idl_degrades_without_silent_approval ... ok
+test tests::unknown_request_and_duplicate_approval_are_errors ... ok
+test tests::unregistered_program_is_not_silently_approved ... ok
+test tests::wrong_account_session_or_capability_is_denied ... ok
+test tests::submit_failure_marks_state_failed ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/lib.rs (target/debug/build/wallet-keystore/8e4f0a3cc2a13a02/out/wallet_keystore-8e4f0a3cc2a13a02)
+
+running 6 tests
+test tests::unknown_handle_and_corrupt_file_are_errors ... ok
+test tests::generated_seeds_are_distinct ... ok
+test tests::on_disk_bytes_do_not_contain_key_material ... ok
+test tests::signature_verifies_with_stored_public_key ... ok
+test tests::create_import_list_sign_lock_and_unlock ... ok
+test tests::wrong_passphrase_is_rejected_and_store_remains_usable ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.39s
+
+     Running unittests src/lib.rs (target/debug/build/wallet-types/8e44fecea538f704/out/wallet_types-8e44fecea538f704)
+
+running 5 tests
+test tests::human_lines_call_out_unlimited_approval_and_verification ... ok
+test tests::degraded_effects_show_raw_calldata_fallback ... ok
+test tests::hexutil_roundtrip ... ok
+test tests::approval_state_exposes_effects_only_when_relevant ... ok
+test tests::types_roundtrip_through_serde_json ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests wallet_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests wallet_keystore
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests wallet_types
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+############ EXIT_CODE test: 0 ############
+############ TEST COUNT passed=23 failed=0 ############

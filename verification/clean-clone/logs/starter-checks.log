@@ -1,0 +1,44 @@
+############ REPO: proclaim-module-starter ############
+date_utc: 2026-11-20T07:31:59Z
+HEAD: 66a12a3462b2b106aa703bc212bd3abd71592a2e
+HEAD_DATE: 2026-11-19T20:36:03-08:00 Initial LP-0023 registry module starter template
+
+--- Documented verification commands found in README.md / clients/js/README.md / docs/INTEGRATION-CHECKLIST.md ---
+README.md:107:| `RESULT.md` | Files, validation actually performed, scope disclaimers | Report |
+README.md:109:## Quick orientation
+README.md:115:- **JS path:** from a checkout of the upstream repo, `npm install ./clients/js`,
+clients/js/README.md:14:npm install ./clients/js
+clients/js/README.md:31:node search.mjs
+docs/INTEGRATION-CHECKLIST.md:75:   `tools/launch_storage_host.sh` + `tools/qtro_storage_upload.py` (QtRO on a
+docs/INTEGRATION-CHECKLIST.md:111:program ID and compares it. `scripts/verify-source.sh` automates the clean-room
+docs/INTEGRATION-CHECKLIST.md:124:make api    # read-only JSON API on 127.0.0.1:3030
+docs/INTEGRATION-CHECKLIST.md:136:  `cargo run --example register_and_search`;
+docs/INTEGRATION-CHECKLIST.md:137:- `npm install ./clients/js` (from the upstream checkout) and run
+
+--- Is there a self-contained test/verify script in this repo? ---
+(none listed above = no self-contained test script / real Cargo.toml / package.json)
+
+--- RESULT.md referenced by README but present? ---
+RESULT.md: ABSENT (README.md line 107 references it)
+
+--- Tool availability ---
+node: MISSING
+npm: /mnt/c/Program Files/nodejs/npm
+cargo: MISSING
+python3: /usr/bin/python3
+/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/run_starter_checks.sh: line 28: node: command not found
+11.12.1
+
+--- COMMAND: node --check clients/js/search.mjs (self-contained syntax check) ---
+/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/run_starter_checks.sh: line 32: node: command not found
+EXIT_CODE node_check: 127
+
+--- COMMAND: cargo metadata --manifest-path Cargo.toml.template --no-deps (expect failure: template, not a real manifest) ---
+/mnt/c/Users/XPS/Downloads/GFD/staged/clean-clone-verification/run_starter_checks.sh: line 36: cargo: command not found
+EXIT_CODE cargo_metadata_template: 127
+
+--- README-declared external prerequisites check ---
+lgs: MISSING
+upstream proclaim repo present in clone: no
+running registry-api on 127.0.0.1:3030: NOT STARTED (out of scope: no deployment / no chain)
+=== END ===

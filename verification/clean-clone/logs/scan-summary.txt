@@ -1,0 +1,3 @@
+proclaim-verify | tracked=10 | authored=8 | spdx_ok=8 | ghp_=0 | github_pat_=0 | PRIVATE_KEY_upper=0 | private_key_lower=0
+proclaim-labs | tracked=121 | authored=111 | spdx_ok=111 | ghp_=0 | github_pat_=0 | PRIVATE_KEY_upper=0 | private_key_lower=1
+proclaim-module-starter | tracked=13 | authored=9 | spdx_ok=9 | ghp_=0 | github_pat_=0 | PRIVATE_KEY_upper=0 | private_key_lower=1

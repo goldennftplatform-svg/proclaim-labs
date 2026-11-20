@@ -1,0 +1,8 @@
+BATTLE-TEST.md
+README.md
+RESULT.md
+bin/verify-source
+docs/PORTABLE-PROGRAM-IDS.md
+run-tests.sh
+tests/real-binary-smoke.sh
+tests/self-test.sh

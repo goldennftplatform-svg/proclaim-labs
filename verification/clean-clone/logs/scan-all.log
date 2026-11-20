@@ -1,0 +1,64 @@
+date_utc: 2026-11-20T07:32:45Z
+scan method: git ls-files (tracked files only), grep -n, case-sensitive unless noted
+############ SECRET + SPDX SCAN: proclaim-verify ############
+HEAD: 310c85010a82a0df9afe6f247e47199338e55172
+tracked_files_total: 10
+--- pattern (case-sensitive literal): ghp_ ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- pattern (case-sensitive literal): github_pat_ ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- pattern (case-sensitive literal): PRIVATE KEY ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- pattern (case-sensitive literal): private key ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- SPDX on authored source files ---
+definition: tracked text files with extensions .rs .toml .sh .md .mjs .js .py .qml .cpp .h .cmake, files named CMakeLists.txt, plus extensionless scripts in bin/ and tests/. Excludes Cargo.lock (generated), LICENSE-* (standard legal texts), and all .git content.
+authored_source_files: 8
+with_SPDX_MIT_AND_Apache-2.0: 8
+without_SPDX:
+
+############ SECRET + SPDX SCAN: proclaim-labs ############
+HEAD: b5e5d8dc4f837e649a56aa55dfbcaa9cf2a1d8ee
+tracked_files_total: 121
+--- pattern (case-sensitive literal): ghp_ ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- pattern (case-sensitive literal): github_pat_ ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- pattern (case-sensitive literal): PRIVATE KEY ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- pattern (case-sensitive literal): private key ---
+lp0021-permissions/consent-store/src/lib.rs:125:                    "your private keys".to_string(),
+lp0021-permissions/consent-store/src/lib.rs:131:                    "your private keys".to_string(),
+lp0021-permissions/consent-store/src/lib.rs:141:                    "your private keys".to_string(),
+lp0021-permissions/consent-store/src/lib.rs:150:                    "your private keys".to_string(),
+count_files_matching: 1   grep_rc=0 (1 = no matches)
+--- SPDX on authored source files ---
+definition: tracked text files with extensions .rs .toml .sh .md .mjs .js .py .qml .cpp .h .cmake, files named CMakeLists.txt, plus extensionless scripts in bin/ and tests/. Excludes Cargo.lock (generated), LICENSE-* (standard legal texts), and all .git content.
+authored_source_files: 111
+with_SPDX_MIT_AND_Apache-2.0: 111
+without_SPDX:
+
+############ SECRET + SPDX SCAN: proclaim-module-starter ############
+HEAD: 66a12a3462b2b106aa703bc212bd3abd71592a2e
+tracked_files_total: 13
+--- pattern (case-sensitive literal): ghp_ ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- pattern (case-sensitive literal): github_pat_ ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- pattern (case-sensitive literal): PRIVATE KEY ---
+count_files_matching: 0   grep_rc=0 (1 = no matches)
+--- pattern (case-sensitive literal): private key ---
+docs/INTEGRATION-CHECKLIST.md:65:  on a fresh local node. **Do not copy any private key into your repository,
+docs/INTEGRATION-CHECKLIST.md:152:history (see §8). Do not commit private keys, tokens or secrets.
+docs/INTEGRATION-CHECKLIST.md:193:- **No secrets.** Never publish private keys, tokens or capability tokens in a
+count_files_matching: 1   grep_rc=0 (1 = no matches)
+--- SPDX on authored source files ---
+definition: tracked text files with extensions .rs .toml .sh .md .mjs .js .py .qml .cpp .h .cmake, files named CMakeLists.txt, plus extensionless scripts in bin/ and tests/. Excludes Cargo.lock (generated), LICENSE-* (standard legal texts), and all .git content.
+authored_source_files: 9
+with_SPDX_MIT_AND_Apache-2.0: 9
+without_SPDX:
+
+=== SCAN SUMMARY ===
+proclaim-verify | tracked=10 | authored=8 | spdx_ok=8 | ghp_=0 | github_pat_=0 | PRIVATE_KEY_upper=0 | private_key_lower=0
+proclaim-labs | tracked=121 | authored=111 | spdx_ok=111 | ghp_=0 | github_pat_=0 | PRIVATE_KEY_upper=0 | private_key_lower=1
+proclaim-module-starter | tracked=13 | authored=9 | spdx_ok=9 | ghp_=0 | github_pat_=0 | PRIVATE_KEY_upper=0 | private_key_lower=1

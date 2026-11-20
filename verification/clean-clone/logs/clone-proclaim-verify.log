@@ -1,0 +1,8 @@
+=== CLONE: proclaim-verify ===
+COMMAND: git clone https://github.com/goldennftplatform-svg/proclaim-verify.git proclaim-verify
+Cloning into 'proclaim-verify'...
+EXIT_CODE: 0
+HEAD: 310c85010a82a0df9afe6f247e47199338e55172
+REMOTE: https://github.com/goldennftplatform-svg/proclaim-verify.git
+=== END CLONE: proclaim-verify ===
+

@@ -1,0 +1,31 @@
+date_utc_start: 2026-11-20T07:21:47Z
+rustc: rustc 1.100.0 (0ef1bc386 2026-11-09)
+cargo: cargo 1.100.0 (3acc79c0c 2026-11-05)
+cargo_fmt: rustfmt 1.11.0-stable (0ef1bc3860 2026-11-09)
+cargo_clippy: clippy 0.1.100 (0ef1bc3860 2026-11-09)
+CARGO_BUILD_JOBS=2
+cargo_home: /home/xps/.cargo
+cargo registry cache top-level:
+CACHEDIR.TAG
+cache
+index
+src
+cargo registry cached crate count: 1128
+
+lp0001-phase0 | fmt=0 | clippy=0 | test_offline=0 | passed=44 | failed=0 | log=logs/labs-lp0001-phase0.log
+
+lp0021-permissions | fmt=0 | clippy=0 | test_offline=0 | passed=23 | failed=0 | log=logs/labs-lp0021-permissions.log
+
+lp0021-phase0 | fmt=0 | clippy=0 | test_offline=0 | passed=23 | failed=0 | log=logs/labs-lp0021-phase0.log
+
+lp0021-phase1 | fmt=0 | clippy=0 | test_offline=0 | passed=51 | failed=0 | log=logs/labs-lp0021-phase1.log
+
+lp0021-phase2-testimonials | fmt=0 | clippy=0 | test_offline=0 | passed=50 | failed=0 | log=logs/labs-lp0021-phase2-testimonials.log
+
+lp0021-phase3 | fmt=0 | clippy=0 | test_offline=0 | passed=50 | failed=0 | log=logs/labs-lp0021-phase3.log
+
+lp0021-phase4-provider-protocol | fmt=0 | clippy=0 | test_offline=0 | passed=45 | failed=0 | log=logs/labs-lp0021-phase4-provider-protocol.log
+
+lp0023-claim-binding | fmt=0 | clippy=0 | test_offline=0 | passed=40 | failed=0 | log=logs/labs-lp0023-claim-binding.log
+
+date_utc_end: 2026-11-20T07:36:31Z
