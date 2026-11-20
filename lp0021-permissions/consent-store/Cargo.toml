@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "consent-store"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+license = "MIT AND Apache-2.0"
+description = "Dependency-free, in-memory wallet permission and consent model for LP-0021 / LP-0001"
+publish = false
+
+[dependencies]
+
+[dev-dependencies]

@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "wallet-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Zero-dependency CLI and approval-gated wallet runtime for the LP-0021 local vertical slice."
+
+[dependencies]
+wallet-chain = { path = "../wallet-chain" }

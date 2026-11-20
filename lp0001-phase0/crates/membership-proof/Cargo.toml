@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "membership-proof"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description.workspace = true
+publish.workspace = true
+
+[dependencies]
+serde.workspace = true
+sha2.workspace = true
+nft-types.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true

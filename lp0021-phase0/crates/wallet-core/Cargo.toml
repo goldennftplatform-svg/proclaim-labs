@@ -1,0 +1,10 @@
+[package]
+name = "wallet-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "LP-0021 Phase 0: approval state machine enforced in the core module"
+
+[dependencies]
+wallet-types = { path = "../wallet-types" }

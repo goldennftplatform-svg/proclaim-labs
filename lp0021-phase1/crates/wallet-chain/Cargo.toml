@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: MIT AND Apache-2.0
+[package]
+name = "wallet-chain"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Deterministic in-memory ledger simulator for the LP-0021 local vertical slice (NOT a real chain)."

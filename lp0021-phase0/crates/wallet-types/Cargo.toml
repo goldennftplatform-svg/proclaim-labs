@@ -1,0 +1,13 @@
+[package]
+name = "wallet-types"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "LP-0021 Phase 0: core wallet domain types"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+serde_json = "1"
