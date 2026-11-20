@@ -44,7 +44,9 @@ secret scan. Source files carry SPDX `MIT AND Apache-2.0`. Build artifacts
 matrix, proof design, spec-change tracking, LP-0021 plan/status and the overall
 progress dashboard, plus `docs/CI-PROGRAM-ID-INVESTIGATION.md`, a read-only
 diagnosis of why a clean CI rebuild produced a different guest image ID than
-the deployed artifact (path-dependent ELF metadata; fix not applied).
+the deployed artifact (path-dependent ELF metadata; fix pushed, run pending),
+and `docs/LP-0023-SELF-ASSESSMENT.md`, an honest criterion-by-criterion status
+including every unmet item and all zero adoption counters.
 
 Each workspace has its own `README.md` and `RESULT.md` with the exact commands
 and results. Re-run them locally; do not take the table on trust.
