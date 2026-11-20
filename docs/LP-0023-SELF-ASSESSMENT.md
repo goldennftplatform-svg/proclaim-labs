@@ -7,6 +7,14 @@ PR has been opened in `logos-co/lambda-prize`. Meeting criteria without a
 solution PR establishes no priority. This document exists so other builders
 can inspect exactly what is local, what is missing, and what is blocked.
 
+**Standing down (2026-11-20):** an independent implementation,
+`jefdiesel/lez-program-registry`, is technically ahead of ours: deployed on a
+third-party LEZ 0.4 bridge network with its own CLI, SDK, Basecamp module and
+CI. It is not on the canonical Logos zone (`https://testnet.lez.logos.co`,
+which is now live) and it has no solution PR, so LP-0023 is not awarded to
+anyone. We are not competing for it. This document is kept as an honest
+record, not a claim.
+
 Assessment date: 2026-11-20. Source: the open LP-0023 specification on
 `logos-co/lambda-prize:master`, checked against
 `goldennftplatform-svg/proclaim`, `proclaim-labs`, `proclaim-module-starter`,

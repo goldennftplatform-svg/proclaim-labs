@@ -4,9 +4,9 @@
 
 **Purpose:** shorten the gap between "testnet 0.4 is live" and "we have a real,
 inspectable deployment." **It does not deploy anything, create users, or earn
-prize credit.** Testnet 0.4 had no stable endpoint at the time of writing
-(roadmap target 30 Nov 2026), so everything here is parameterised by values
-you supply on launch day.
+prize credit.** The official zone is now live at
+`https://testnet.lez.logos.co` (probed 2026-11-20, channel ID `0101…0101`).
+Everything here is parameterised by values you supply on launch day.
 
 ## What is ready now
 
@@ -20,7 +20,7 @@ you supply on launch day.
 
 ## What is NOT ready, and cannot be made ready by tooling
 
-- **No live testnet 0.4** — no endpoint or stable release to point at yet.
+- **No deployment by us** — the official zone is live, but deploy is on hold by explicit decision.
 - **No on-chain verifier program** — the 0.4 IDL/ABI is not available, so a
   verifier written now would be a guess. We will write it against the real 0.4
   interface when it exists.

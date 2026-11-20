@@ -7,7 +7,7 @@ tested locally, not that the underlying thing is done.
 
 | # | Prerequisite | Tooling status | Real-world status |
 | --- | --- | --- | --- |
-| 1 | Live testnet 0.4 endpoint | `probe-testnet.sh` ready | **BLOCKED** — no stable endpoint; roadmap target 30 Nov 2026 |
+| 1 | Live testnet 0.4 endpoint | `probe-testnet.sh` ready | **LIVE** — official zone `https://testnet.lez.logos.co`, channel ID `0101…0101`, probed 2026-11-20 |
 | 2 | Green E2E on default branch | Audited lifecycle script exists | **IN FLIGHT** — run `44695605569`; prior run passed the program-ID fix then hit a channel-ID config bug, now fixed |
 | 3 | Deploy registry program to 0.4 | `plan-deploy.sh` prints a reviewable plan | **NOT DONE** — needs endpoint + explicit approval |
 | 4 | Record real deploy/registration evidence | `record-event.sh` + `verify-event-log.sh` ready | **0 events** — nothing recorded because nothing deployed |
