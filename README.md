@@ -53,6 +53,11 @@ previously published here: `lp0021-phase0` has 23 tests, not 20. The raw
 commands, logs and caveats are in [`verification/clean-clone/`](verification/clean-clone/FINDINGS.md).
 That report is local reproduction, not third-party review or prize credit.
 
+[`launch-readiness/`](launch-readiness/README.md) contains local tools for the day
+testnet 0.4 is live: an RPC probe, an append-only hash-chained log for **real**
+events, and a deploy planner that never executes. It creates no users and
+claims no criteria. Its self-tests pass offline; see `launch-readiness/RESULT.md`.
+
 Each workspace has its own `README.md` and `RESULT.md` with the exact commands
 and results. Re-run them locally; do not take the table on trust.
 
