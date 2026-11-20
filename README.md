@@ -41,7 +41,9 @@ secret scan. Source files carry SPDX `MIT AND Apache-2.0`. Build artifacts
 
 `docs/` contains the planning and status material: the LP-0001 46-criterion
 matrix, proof design, spec-change tracking, LP-0021 plan/status and the overall
-progress dashboard.
+progress dashboard, plus `docs/CI-PROGRAM-ID-INVESTIGATION.md`, a read-only
+diagnosis of why a clean CI rebuild produced a different guest image ID than
+the deployed artifact (path-dependent ELF metadata; fix not applied).
 
 Each workspace has its own `README.md` and `RESULT.md` with the exact commands
 and results. Re-run them locally; do not take the table on trust.
